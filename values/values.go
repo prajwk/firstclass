@@ -29,4 +29,5 @@ func Values1() {
 	fmt.Println(true && false)
 	fmt.Println(true || false)
 	fmt.Println(!false)
+	fmt.Println(!true)
 }
