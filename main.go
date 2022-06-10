@@ -14,5 +14,8 @@ func main() {
 	//values.PointersValue()
 	// values.IfElseGo()
 	//values.SwitchCase()
-	loop.LoopStatememnt()
+	//loop.LoopStatememnt()
+	//loop.GetPrimeNumbers()
+	//loop.GetPrimeNumbers1(100) // passing value through func
+	loop.Plus()
 }
