@@ -2,7 +2,7 @@ package values
 
 import "fmt"
 
-func PointersValue() {
+func PointersValue() { // address and reference
 	var p *int
 
 	i := 42

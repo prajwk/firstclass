@@ -54,6 +54,36 @@ func plusMinus(num1, num2 int) (int, int) {
 	return plus, minus
 }
 
-// func swap(x, y string) (string, string) {
-// 	return y, x
+func CheckSwap() {
+	var a, b int
+	a = 5
+	b = 10
+	fmt.Printf("Before swapping, a = %d\n", a) //
+	fmt.Printf("Before swapping, b = %d\n", b)
+	swapByReference(&a, &b) //passing address // call by value case (5, 10) // call by reference case (0x3434, 0x234 )
+	fmt.Printf("After swapping, a = %d\n", a)
+	fmt.Printf("After swapping, b = %d\n", b)
+}
+
+// // call by value
+// func swap(x, y int) int {
+// 	var temp int
+// 	temp = x //save temp to temporary variable
+// 	x = y  // put y into x
+// 	y = temp // put temp into y
+// 	fmt.Printf("Inside swap function swapping, x = %d\n", x)
+// 	fmt.Printf("Inside swap function swapping, y = %d\n", y)
+// 	return ab
+
 // }
+
+// call by reference
+func swapByReference(x, y *int) int { //pointer of integer type
+	var temp int
+	temp = *x //save temp to temporary variable
+	*x = *y   // put y into x
+	*y = temp // put temp into y
+	// fmt.Printf("Inside swap function swapping, x = %d\n", x)
+	// fmt.Printf("Inside swap function swapping, y = %d\n", y)
+	return temp
+}
