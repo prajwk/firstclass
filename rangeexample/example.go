@@ -3,13 +3,70 @@ package rangeexample
 import "fmt"
 
 func RangeExample() {
+	person1 := person{
+		firstName:   "prajwal",
+		lastName:    "shrestha",
+		phoneNumber: "2345342352",
+		age:         28}
+
+	if person1.age > 30 {
+		fmt.Println("age = ", person1.firstName)
+	} else {
+		fmt.Println("Person =", person1.lastName)
+	}
+	fmt.Println("Person1 =", person1)
+
+	person2 := person{
+		firstName: "sami",
+		lastName:  "shrestha"}
+	fmt.Println("Person2 =", person2)
+
+	fmt.Println(newPerson("ram", "gautam"))
+
 	// exampleOne()
 	// exampleMap()
-	exampleTwo()
+	// exampleTwo()
+	// exampleVariadicFunction()
 }
 
-func exampleTwo(){
-	for i, value := range "ABCabc"{ //using ascii value
+
+
+type person struct {
+	/* struct is a collection of different variable  */
+	firstName   string
+	lastName    string
+	phoneNumber string
+	age         int
+}
+
+func newPerson(firstName string, lastName string) *person { //using pointer to pass address
+	p := person{
+		firstName: firstName,
+		lastName:  lastName,
+	}
+	p.age = 29
+	return &p // passing address of p using "&p"
+}
+
+func exampleVariadicFunction() {
+	nums := []int{2, 3, 4, 5, 6} // passing array
+	// sum(1, 2, 3, 4, 5, 6) // passing multiple arguments case
+	sum(nums...) // triple dots will pass array as multiple arguments
+	sum(1, 2)
+	sum(1, 2, 4, 7)
+}
+
+func sum(nums ...int) {
+	fmt.Println("nums value = ", nums)
+	sum := 0
+	for _, num := range nums {
+		sum += num
+	}
+	fmt.Println("sum =", sum)
+}
+
+func exampleTwo() {
+	for i, value := range "ABCabc" { //using ascii value
 		fmt.Println(i, value)
 	}
 }

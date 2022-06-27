@@ -1,8 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
+import "github.com/prajwk/firstclass/rangeexample"
 
 const Pi = 3.14
 
@@ -33,22 +31,23 @@ func main() {
 	// array.ArrayMain()
 	// array.SlicesMain()
 	// rangeexample.RangeExample()
+	rangeexample.MethodExample()
 
-	nextNumber := getSequence()
-	fmt.Println(nextNumber())
-	fmt.Println(nextNumber())
-	fmt.Println(nextNumber())
+	// nextNumber := getSequence()
+	// fmt.Println(nextNumber())
+	// fmt.Println(nextNumber())
+	// fmt.Println(nextNumber())
 
-	fmt.Println("=======")
+	// fmt.Println("=======")
 
-	nextNumber2 := getSequence()
-	fmt.Println(nextNumber2())
-	fmt.Println(nextNumber2())
-	fmt.Println(nextNumber2())
+	// nextNumber2 := getSequence()
+	// fmt.Println(nextNumber2())
+	// fmt.Println(nextNumber2())
+	// fmt.Println(nextNumber2())
 
-	fmt.Println(nextNumber())
-	fmt.Println(nextNumber())
-	fmt.Println(nextNumber())
+	// fmt.Println(nextNumber())
+	// fmt.Println(nextNumber())
+	// fmt.Println(nextNumber())
 }
 
 func getSequence() func() int {
