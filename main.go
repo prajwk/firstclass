@@ -1,6 +1,8 @@
 package main
 
-import "github.com/prajwk/firstclass/rangeexample"
+import (
+	"github.com/prajwk/firstclass/iexample"
+)
 
 const Pi = 3.14
 
@@ -31,7 +33,8 @@ func main() {
 	// array.ArrayMain()
 	// array.SlicesMain()
 	// rangeexample.RangeExample()
-	rangeexample.MethodExample()
+	// rangeexample.MethodExample()
+	iexample.MainIStart()
 
 	// nextNumber := getSequence()
 	// fmt.Println(nextNumber())
